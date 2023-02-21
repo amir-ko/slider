@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/slider.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <button onclick="backward()">
+                <i
+                    class="bi bi-arrow-left"
+                    aria-hidden="true"
+                ></i>
+            </button>
+            <button onclick="forward()">
+                <i
+                    class="bi bi-arrow-right"
+                    aria-hidden="true"
+                ></i>
+            </button>
+        </div>
+    </div>
+    <script>
+        let container = document.querySelector(".container");
+let image = ["image/1.jpg", "image/2.jpg", "image/3.jpg"];
+let index = 0;
+
+const forward = () => {
+    index++;
+    if (index > image.length - 1) {
+        index = 0;
+    }
+    container.style.backgroundImage = `url(${image[index]})`;
+}
+const backward = () => {
+    index--;
+    if (index < 0) {
+        index = image.length - 1;
+    }
+    container.style.backgroundImage = `url(${image[index]})`;
+}
+    </script>
+</body>
+</html>

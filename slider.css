@@ -1,0 +1,38 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.main-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.container {
+	width: 450px;
+	height: 300px;
+	background-image: url(image/1.jpg);
+	background-position: center;
+	background-size: cover;
+	transition: 0.4s;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+button {
+	margin: 1rem;
+	outline: none;
+	width: 40px;
+	height: 40px;
+	background: #fff;
+	font-size: 1.1rem;
+	border: none;
+	border-radius: 50%;
+	opacity: 0.5;
+	cursor: pointer;
+	transition: 0.2s;
+}
+button:hover {
+	opacity: 1;
+}
